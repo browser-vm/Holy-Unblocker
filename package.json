@@ -17,7 +17,8 @@
     "build": "node run-command.mjs build && cd lib/rammerhead && npm install && npm run build",
     "proxy-validator": "node proxyServiceValidator.js",
     "workflow-test": "node run-command.mjs workflow",
-    "deployment": "npm install && npm run build && node backend.js"
+    "deployment": "npm install && npm run build && node backend.js",
+    "deploy-vercel": "vercel --prod"
   },
   "keywords": [
     "proxy",
