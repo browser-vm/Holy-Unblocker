@@ -4,10 +4,9 @@ WORKDIR /app
 
 COPY package.json ./
 
-RUN npm config set unsafe-perm true
 RUN npm set registry https://registry.npmjs.org/
 RUN npm config set fetch-retries 5
-RUN npm install --verbose
+RUN npm install --unsafe-perm --verbose
 
 # Copy the rest of the project files
 COPY . .
