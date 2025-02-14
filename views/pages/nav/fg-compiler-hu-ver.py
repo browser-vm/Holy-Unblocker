@@ -1,4 +1,5 @@
-import os, random, math
+import os, math
+import secrets
 
 outindex = "flash-out.html"
 breaker = "<wbr>"
@@ -17,7 +18,7 @@ def splitUpStr(s, indices):
 def genRandom(count, cap):
 	randoms = []
 	for x in range(0, count):
-		randoms.append(random.randint(1, cap - 1))
+		randoms.append(secrets.SystemRandom().randint(1, cap - 1))
 	randoms.sort()
 	return randoms
 
